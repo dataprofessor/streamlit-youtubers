@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 
+st.set_page_config("Streamlit YouTubers", "📺")
+st.title("📺 Streamlit YouTubers")
+
 # Read in data from the Google Sheets
 # Uses st.cache_data to only rerun when the query changes or after 10 min.
 #@st.cache_data(ttl=600)
