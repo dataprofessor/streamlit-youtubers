@@ -18,7 +18,7 @@ column_configuration = {
         "YouTube Channel ID", help="ID of YouTube channels", max_chars=100
     ),
     "avatar": st.column_config.ImageColumn("Avatar", help="YouTube channel's avatar"),
-    "streamlit_playlist": st.column_config.TextColumn(
+    "streamlit_playlist": st.column_config.LinkColumn(
         "Streamlit Playlist", help="Playlist of Streamlit tutorial videos", max_chars=100
     )
 }
