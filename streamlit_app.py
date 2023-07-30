@@ -23,4 +23,4 @@ column_configuration = {
     )
 }
 
-st.data_editor(df)
+st.data_editor(df, column_config=column_configuration, use_container_width=True, hide_index=True,)
