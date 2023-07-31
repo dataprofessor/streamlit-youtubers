@@ -22,7 +22,7 @@ def get_number_of_videos(playlist_url):
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
     video_elements = soup.find_all('ytd-playlist-video-renderer')
-    return len(video_elements)
+    return video_elements
 
 url = 'https://www.youtube.com/playlist?list=PLpdmBGJ6ELUI6Tws8BqVVNadsYOQlWGtw'
 st.write(get_number_of_videos(url))
