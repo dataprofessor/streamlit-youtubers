@@ -21,7 +21,7 @@ df = load_data(st.secrets["public_gsheets_url"])
 def get_number_of_videos(playlist_url):
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
-    video_elements = soup.find_all('ytd-playlist-video-renderer')
+    video_elements = soup.find_all('header-container')
     return video_elements
 
 url = 'https://www.youtube.com/playlist?list=PLpdmBGJ6ELUI6Tws8BqVVNadsYOQlWGtw'
