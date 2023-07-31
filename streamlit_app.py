@@ -18,7 +18,7 @@ def load_data(sheets_url):
 df = load_data(st.secrets["public_gsheets_url"])
 
 # Get number of videos in YouTube playlist
-def get_num_videos(playlist_url):
+def get_number_of_videos(playlist_url):
     response = requests.get(playlist_url)
     soup = BeautifulSoup(response.text, 'html.parser')
     return len(soup.find_all('ytd-playlist-video-renderer'))
