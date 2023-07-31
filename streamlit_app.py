@@ -18,14 +18,14 @@ def load_data(sheets_url):
 df = load_data(st.secrets["public_gsheets_url"])
 
 # Get number of videos in YouTube playlist
-def get_number_of_videos(playlist_url):
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    video_elements = soup.select("div contents")
-    return video_elements
+#def get_number_of_videos(playlist_url):
+#    response = requests.get(url)
+#    soup = BeautifulSoup(response.text, 'html.parser')
+#    video_elements = soup.select("div contents")
+#    return video_elements
 
-url = 'https://www.youtube.com/playlist?list=PLpdmBGJ6ELUI6Tws8BqVVNadsYOQlWGtw'
-st.write(get_number_of_videos(url))
+#url = 'https://www.youtube.com/playlist?list=PLpdmBGJ6ELUI6Tws8BqVVNadsYOQlWGtw'
+#st.write(get_number_of_videos(url))
 
 column_configuration = {
     "name": st.column_config.TextColumn(
