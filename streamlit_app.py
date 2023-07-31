@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config("Streamlit YouTubers", "📺")
+st.set_page_config("Streamlit YouTubers", "📺", layout="wide")
 st.title("📺 Streamlit YouTubers")
 
 st.warning("Streamlit YouTubers is a list of YouTube channels creating content on the use of Streamlit to build data apps.")
