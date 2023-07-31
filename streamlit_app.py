@@ -4,6 +4,8 @@ import pandas as pd
 st.set_page_config("Streamlit YouTubers", "📺")
 st.title("📺 Streamlit YouTubers")
 
+st.warning("Streamlit YouTubers is a list of YouTube channels creating content on the use of Streamlit to build data apps.")
+
 # Read in data from the Google Sheets
 # Uses st.cache_data to only rerun when the query changes or after 10 min.
 #@st.cache_data(ttl=600)
