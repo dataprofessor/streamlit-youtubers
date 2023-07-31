@@ -18,19 +18,10 @@ def load_data(sheets_url):
 df = load_data(st.secrets["public_gsheets_url"])
 
 # Get number of videos in YouTube playlist
-def get_number_of_videos(url):
-    response = requests.get(url)
+def get_num_videos(playlist_url):
+    response = requests.get(playlist_url)
     soup = BeautifulSoup(response.text, 'html.parser')
-    
-    # The number of videos is contained within an element with the attribute 'aria-disabled="true"'
-    # We find that element and extract the text.
-    number_of_videos_element = soup.find('li', {'aria-disabled': 'true'})
-    if number_of_videos_element is not None:
-        # The text is in the form 'xx videos', so we split the text and take the first part, which is the number.
-        number_of_videos = number_of_videos_element.text.split()[0]
-        return number_of_videos
-    else:
-        return "Unable to find the number of videos"
+    return len(soup.find_all('ytd-playlist-video-renderer'))
 
 url = 'https://www.youtube.com/playlist?list=PLpdmBGJ6ELUI6Tws8BqVVNadsYOQlWGtw'
 st.write(get_number_of_videos(url))
